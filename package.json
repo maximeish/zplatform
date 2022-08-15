@@ -45,7 +45,8 @@
   },
   "react-dotenv": {
     "whitelist": [
-      "API_KEY"
+      "API_KEY",
+      "CLERK_FRONTENDAPI_KEY"
     ]
   }
 }

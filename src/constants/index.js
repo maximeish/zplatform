@@ -1,1 +1,3 @@
-export const CLERK_FRONTEND_API = "clerk.excited.zebra-22.lcl.dev";
+import env from "react-dotenv";
+
+export const CLERK_FRONTENDAPI_KEY = env.CLERK_FRONTENDAPI_KEY;

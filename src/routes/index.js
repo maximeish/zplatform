@@ -5,15 +5,12 @@ import {
   RedirectToSignUp,
 } from "@clerk/clerk-react";
 import React from "react";
-import env from "react-dotenv";
 import LandingView from "../views/Landing";
-import { CLERK_FRONTEND_API } from "../constants";
+import { CLERK_FRONTENDAPI_KEY } from "../constants";
 
-function Home() {
-  //   const frontendApi = env.FRONTENDAPI_KEY;
-  //   console.log("........api", frontendApi);
+const Home = () => {
   return (
-    <ClerkProvider frontendApi={CLERK_FRONTEND_API}>
+    <ClerkProvider frontendApi={CLERK_FRONTENDAPI_KEY}>
       <SignedIn>
         <LandingView />
       </SignedIn>
@@ -22,6 +19,6 @@ function Home() {
       </SignedOut>
     </ClerkProvider>
   );
-}
+};
 
 export default Home;
