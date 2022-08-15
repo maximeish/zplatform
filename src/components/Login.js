@@ -2,6 +2,7 @@ import { useState } from "react";
 import { loginFields } from "../constants/formFields";
 import Input from "./Input";
 import FormAction from "./FormAction";
+import env from "react-dotenv";
 
 const fields = loginFields;
 let fieldsState = {};
@@ -19,7 +20,22 @@ export default function Login() {
     authenticateUser();
   };
 
-  const authenticateUser = () => {};
+  const authenticateUser = () => {
+    const endpoint = `https://api.loginradius.com/identity/v2/auth/login?apikey=${env.API_KEY}`;
+    console.log(".........sending", loginState);
+    fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(loginState),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("success login", data);
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <form className="mt-8 space-y-6">

@@ -1,8 +1,8 @@
 const loginFields = [
   {
     labelText: "Email",
-    labelFor: "email-address",
-    id: "email-address",
+    labelFor: "email",
+    id: "email",
     name: "email",
     type: "email",
     autoComplete: "email",
@@ -15,7 +15,6 @@ const loginFields = [
     id: "password",
     name: "password",
     type: "password",
-    autoComplete: "current-password",
     isRequired: true,
     placeholder: "Your password",
   },
