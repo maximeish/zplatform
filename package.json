@@ -1,52 +1,49 @@
 {
   "name": "zplatform",
   "version": "0.1.0",
+  "description": "ZPlatform Client",
   "private": true,
   "dependencies": {
-    "@clerk/clerk-react": "^4.0.2",
     "@craco/craco": "^6.4.5",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.4",
+    "@testing-library/jest-dom": "github:testing-library/jest-dom",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "autoprefixer": "^9",
-    "postcss": "^7",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.1",
+    "is-empty": "^1.2.0",
+    "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
-    "react-dotenv": "^0.1.3",
-    "react-router-dom": "^6.3.0",
+    "react-redux": "^8.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "web-vitals": "^2.1.4"
+    "uuid": "^9.0.0"
   },
   "scripts": {
-    "start": "react-dotenv && craco start",
-    "build": "react-dotenv && craco build",
-    "test": "react-dotenv && craco test",
+    "start": "react-scripts start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "react-dotenv": {
-    "whitelist": [
-      "API_KEY",
-      "CLERK_FRONTENDAPI_KEY"
-    ]
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
