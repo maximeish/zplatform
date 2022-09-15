@@ -2,7 +2,7 @@ import { DialogActions, DialogContent, DialogContentText } from "@mui/material";
 import { useRef } from "react";
 import PasswordField from "../inputs/PasswordField";
 import SubmitButton from "../inputs/SubmitButton";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import Modal from "../../Modal";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ const ChangePassword = (props) => {
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
   const [isOpen] = useState(true);
-  const { user } = useSelector((state) => state.auth);
+  // const { user } = useSelector((state) => state.auth);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

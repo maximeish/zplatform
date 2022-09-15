@@ -22,9 +22,9 @@ import Modal from "./components/dashboard/Modal";
 import { useSelector } from "react-redux";
 
 // Check for token to keep user logged in
-if (localStorage.jwtToken) {
+if (localStorage.authToken) {
   // Set auth token header auth
-  const token = localStorage.jwtToken;
+  const token = localStorage.authToken;
   setAuthToken(token);
   // Decode token and get user info and exp
   const decoded = jwt_decode(token);

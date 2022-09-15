@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import ChangeEmail from "./ChangeEmail";
 import DeleteAccount from "./DeleteAccount";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import ChangePassword from "./ChangePassword";
 import { useState } from "react";
 
@@ -16,7 +16,7 @@ const AccountSettings = () => {
   const [passOpen, setPassOpen] = useState(false);
   const [deleteAcc, setDeleteAcc] = useState(false);
 
-  const { user } = useSelector((state) => state.auth);
+  // const { user } = useSelector((state) => state.auth);
 
   const handleAction = async (action) => {
     try {

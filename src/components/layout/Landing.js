@@ -9,7 +9,7 @@ const Landing = () => (
           Welcome to ZPlatform provided to you by Company Z
         </h4>
         <p className="flow-text grey-text text-darken-1">
-          Access various online services with ease
+          Access various services online with ease
         </p>
         <br />
         <div className="col s6">

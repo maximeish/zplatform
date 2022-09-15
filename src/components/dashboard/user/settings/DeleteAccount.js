@@ -5,14 +5,14 @@ import {
   DialogContent,
   DialogContentText,
 } from "@mui/material";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import Modal from "../../Modal";
 import { useState } from "react";
 
 const DeleteAccount = (props) => {
   const { setDeleteAcc } = props;
   const [isOpen] = useState(true);
-  const { user } = useSelector((state) => state.auth);
+  // const { user } = useSelector((state) => state.auth);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
